@@ -56,7 +56,7 @@ public class ShortMemoryGame : MonoBehaviour
     {
         Screen.fullScreen = true;
 
-        buttonSprites = Resources.LoadAll<Sprite>("GameAssets/Buttons4");        
+        buttonSprites = Resources.LoadAll<Sprite>("GameAssets/Buttons");        
         StartNewGame();
     }
 
@@ -323,7 +323,7 @@ public class ShortMemoryGame : MonoBehaviour
 
         foreach (var item in hiddenButtons)
         {
-            item.image.sprite = this.buttonSprites[2];
+            item.image.sprite = this.buttonSprites[3];
         }
 
         yield return new WaitForSeconds(1);

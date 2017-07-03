@@ -7,8 +7,8 @@ public class KeepOnLoad : MonoBehaviour
     public string Name = "";
 
     void Awake() { 
-        //DontDestroyOnLoad(this.gameObject);
-        //SceneManager.activeSceneChanged += OnSceneChanged;
+        DontDestroyOnLoad(this.gameObject);
+        SceneManager.activeSceneChanged += OnSceneChanged;
     }
 
     void OnSceneChanged(Scene a, Scene b)

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -101,34 +100,18 @@ public class CalculatorGame : MonoBehaviour
 
     public void Menu(bool status)
     {
-        //menuContainer.GetComponent<Animator>().SetTrigger(status ? "SlideIn" : "SlideOut");
-        //gameContainer.GetComponent<Animator>().SetTrigger(status ? "GameOver" : "NewGame");
+        menuContainer.GetComponent<Animator>().SetTrigger(status ? "SlideIn" : "SlideOut");
+        gameContainer.GetComponent<Animator>().SetTrigger(status ? "GameOver" : "NewGame");
 
         IsPaused = status;
         if (status)
         {
-            StartCoroutine(ShowPanel());
             gameTimer.PauseTimer();
         }
         else
         {
-            StartCoroutine(HidePanel());
             gameTimer.BeginTimer();
         }
-    }
-
-    IEnumerator ShowPanel()
-    {
-        menuContainer.GetComponent<Animator>().Play("SlideIn");
-
-        yield return new WaitForSeconds(0.2f);
-    }
-
-    IEnumerator HidePanel()
-    {
-        menuContainer.GetComponent<Animator>().Play("SlideOut");
-
-        yield return new WaitForSeconds(0.2f);
     }
 
     public void ToggleMenu()
