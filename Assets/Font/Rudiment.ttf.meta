@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 560dffc56152edf4f826e29cac7808c7
+timeCreated: 1486160232
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rudiment
+  fontNames:
+  - Rudiment
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
